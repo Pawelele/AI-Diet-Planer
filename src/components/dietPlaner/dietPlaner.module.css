@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 360px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 1px 2px 22px -13px rgba(66, 68, 90, 1);
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.formInput {
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-top: 10px;
+  width: 250px;
+  font-size: 18px;
+}
+
+.formControl .kcalInput {
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-top: 10px;
+  width: 90px;
+  font-size: 18px;
+}
+
+.kcalInputWrapper {
+  position: relative;
+}
+
+.kcalInputWrapper span {
+  position: absolute;
+  top: 20px;
+  left: 65px;
+}
+
+.radioInputWrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
+.button {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7a22;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
