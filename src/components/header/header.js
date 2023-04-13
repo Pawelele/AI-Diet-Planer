@@ -10,30 +10,35 @@ const Header = () => {
       <div className={classes.nav}>
         <nav>
           <NavLink
+            exact
             to="/"
-            exact={true}
             className={({isActive}) =>
             isActive ? classes.active : classes.link}
           >
-            Strona Główna
+            Main Page
           </NavLink>
           <NavLink
             to="/diet"
-            exact
             className={({isActive}) =>
             isActive ? classes.active : classes.link}
           >
-            Dieta
+            Diet Generator
+          </NavLink>
+          <NavLink
+            to="/caloriesCalculator"
+            className={({isActive}) =>
+            isActive ? classes.active : classes.link}
+          >
+            Calories Calculator
           </NavLink>
           <NavLink
             to="/recipes"
-            exact
             className={({isActive}) =>
             isActive ? classes.active : classes.link}
           >
-            Przepisy
+            Recipes
           </NavLink>
-          <NavLink className={classes.link}>Konto</NavLink>
+          <NavLink className={classes.link}>Account</NavLink>
         </nav>
       </div>
     </div>

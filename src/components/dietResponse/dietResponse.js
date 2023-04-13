@@ -5,7 +5,7 @@ const DietResponse = (props) => {
 
   return (
     <div className={classes.wrapper}>
-      <h1>Diet Response Works</h1>
+      <h1>Your plan:</h1>
     </div>
   )
 }
