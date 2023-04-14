@@ -77,3 +77,7 @@
   align-items: flex-start;
   margin-bottom: 20px;
 }
+
+.boldLabel {
+  font-weight: 700;
+}

@@ -12,7 +12,6 @@ const DietPlaner = props => {
     supper: false,
   });
   const [isSubmited, setIsSubmited] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -20,6 +19,8 @@ const DietPlaner = props => {
 
     const dietData = formValue;
     console.log(dietData);
+
+    props.fetchDiet();
   }
 
   const caloriesChangeHandler = (event) => {
@@ -49,14 +50,14 @@ const DietPlaner = props => {
       <h2>Enter data below:</h2>
       <form onSubmit={submitHandler} className={classes.form}>
         <div className={classes.formControl}>
-          <label htmlFor="calories">How many calories you want to eat?</label>
+          <label htmlFor="calories" className={classes.boldLabel}>How many calories you want to eat?</label>
           <div className={classes.kcalInputWrapper}>
             <input type="number" id="calories" step={50} min={1000} max={7000} className={classes.kcalInput} value={formValue.calories} onChange={caloriesChangeHandler}/>
             <span>kcal</span>
           </div>
         </div>
         <div className={classes.formControl}>
-          <label htmlFor="vegan">Are you vegan?</label>
+          <label htmlFor="vegan" className={classes.boldLabel}>Are you vegan?</label>
           <div className={classes.radioInputWrapper}>
             <input type="radio" id="veganYes" name='vegan' value={true} onChange={veganChangeHandler}/>
             <label htmlFor="veganYes">Yes</label>
@@ -66,7 +67,7 @@ const DietPlaner = props => {
             <label htmlFor="veganNo">No</label>
           </div>
         </div>
-        <label>How many dishes you want?</label>
+        <label className={classes.boldLabel}>How many meals you want?</label>
         <div className={classes.checkboxWrapper}>
           <div className={classes.radioInputWrapper}>
             <input type="checkbox" id="breakfast" name="breakfast" checked={formValue.breakfast} onChange={chackboxChangeHandler}/>
