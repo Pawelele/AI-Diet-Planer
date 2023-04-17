@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.dietPlanerWrapper {
+.caloriesWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

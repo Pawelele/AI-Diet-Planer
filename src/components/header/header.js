@@ -1,11 +1,12 @@
 import classes from './header.module.css';
 import { NavLink } from 'react-router-dom';
+import AIDietLogo from '../../assets/img/logo-no-background.png';
 
 const Header = () => {
   return (
     <div className={classes.header}>
       <div className={classes.logo}>
-        <h1>AI Diet Planer</h1>
+        <img src={AIDietLogo} className={classes.logo}/>
       </div>
       <div className={classes.nav}>
         <nav>
@@ -25,7 +26,7 @@ const Header = () => {
             Diet Generator
           </NavLink>
           <NavLink
-            to="/caloriesCalculator"
+            to="/calories"
             className={({isActive}) =>
             isActive ? classes.active : classes.link}
           >

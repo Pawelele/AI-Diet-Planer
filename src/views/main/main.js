@@ -1,5 +1,6 @@
 import classes from './main.module.css';
 import fruitImg from '../../assets/img/fruit.png';
+import AIDietLogo from '../../assets/img/logo-no-background.png'
 
 const Main = props => {
   return (
