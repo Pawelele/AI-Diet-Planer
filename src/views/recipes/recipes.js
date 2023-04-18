@@ -1,27 +1,28 @@
-import classes from './calories.module.css'
-import Spinner from '../../components/spinner/spinner';
+import classes from './recipes.module.css'
+import RecipesGenerator from '../../components/recipesGenerator/recipesGenerator'
 import { useState } from 'react';
-import CaloriesPlaner from '../../components/caloriesPlaner/caloriesPlaner';
+import Spinner from '../../components/spinner/spinner';
 
-const Calories = () => {
-  const [calories, setCalories] = useState('');
+const Recipes = () => {
+  const [recipe, setRecipe] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchCalories = (data) => {
+
+  const fetchRecipes = (data) => {
     setLoading(true);
-    setCalories('');
+    setRecipe('');
     setError(null);
 
-    fetch('http://127.0.0.1:8000/calories?'+ new URLSearchParams(data))
+    fetch('http://127.0.0.1:8000/recipe?' + new URLSearchParams(data))
     .then(response => {
       if(!response.ok) {
         throw new Error('Something went wrong!');
       }
-      return response.json()
+      return response.json();
     })
     .then(data => {
-      setCalories(data.message);
+      setRecipe(data.message);
       setLoading(false);
     })
     .catch(error => {
@@ -32,9 +33,9 @@ const Calories = () => {
 
   return (
     <div className={classes.wrapper}>
-      <h1>Calculate amount of calories needed</h1>
-      <div className={classes.caloriesWrapper}>
-        <CaloriesPlaner fetchCalories={fetchCalories} calories={calories} />
+      <h1>Recipes</h1>
+      <div className={classes.recipesWrapper}>
+        <RecipesGenerator onSubmit={fetchRecipes}/>
       </div>
       <Spinner
         loading={loading}
@@ -46,4 +47,4 @@ const Calories = () => {
   )
 }
 
-export default Calories;
+export default Recipes

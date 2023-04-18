@@ -9,6 +9,10 @@
   box-shadow: 1px 2px 22px -13px rgba(66, 68, 90, 1);
 }
 
+.caloriesForm {
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -25,7 +29,7 @@
   margin-bottom: 20px;
 }
 
-.formInput {
+/* .formInput {
   height: 40px;
   border: 1px solid gray;
   border-radius: 5px;
@@ -33,6 +37,13 @@
   margin-top: 10px;
   width: 250px;
   font-size: 18px;
+} */
+
+.rangeInput {
+  margin-top: 10px;
+  width: 250px;
+  background-color: pink;
+  color: pink;
 }
 
 .formControl .ageInput {
@@ -60,4 +71,14 @@
 
 .boldLabel {
   font-weight: 700;
+}
+
+.caloriesResponse {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.caloriesNumber {
+  color:#ff7a22
 }

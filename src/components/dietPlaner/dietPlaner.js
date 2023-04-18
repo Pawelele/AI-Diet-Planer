@@ -18,9 +18,7 @@ const DietPlaner = props => {
     setIsSubmited(true);
 
     const dietData = formValue;
-    console.log(dietData);
-
-    props.fetchDiet();
+    props.fetchDiet(dietData);
   }
 
   const caloriesChangeHandler = (event) => {

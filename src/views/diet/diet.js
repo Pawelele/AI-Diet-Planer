@@ -15,12 +15,12 @@ const Diet = props => {
     to: { opacity: 1, transform: 'scale(1)' },
   });
 
-  const fetchDiet = () => {
+  const fetchDiet = (data) => {
     setLoading(true);
     setDietPlan('');
     setError(null);
 
-    fetch('http://127.0.0.1:8000/diet')
+    fetch('http://127.0.0.1:8000/diet?'+ new URLSearchParams(data))
     .then(response => {
       if(!response.ok) {
         throw new Error('Something went wrong!');

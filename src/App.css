@@ -1,0 +1,14 @@
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.containerApp {
+  grid-row: 2;
+}
+
+footer {
+  margin-top: 40px;
+  grid-row: 3;
+}

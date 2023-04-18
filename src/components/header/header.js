@@ -6,7 +6,12 @@ const Header = () => {
   return (
     <div className={classes.header}>
       <div className={classes.logo}>
-        <img src={AIDietLogo} className={classes.logo}/>
+        <NavLink
+          to="/"
+          exact
+        >
+          <img src={AIDietLogo} className={classes.logo}/>
+        </NavLink>
       </div>
       <div className={classes.nav}>
         <nav>
