@@ -6,6 +6,7 @@ import Diet from './views/diet/diet';
 import Calories from './views/calories/calories';
 import Footer from './components/footer/footer';
 import Recipes from './views/recipes/recipes';
+import SavedItems from './views/savedItems/savedItems';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/diet" element={<Diet />} />
           <Route path="/calories" element={<Calories />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/savedItems" element={<SavedItems />} />
         </Routes>
       </div>
         <Footer />

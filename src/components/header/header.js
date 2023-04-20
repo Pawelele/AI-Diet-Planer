@@ -28,7 +28,7 @@ const Header = () => {
             className={({isActive}) =>
             isActive ? classes.active : classes.link}
           >
-            Diet Generator
+            Diet
           </NavLink>
           <NavLink
             to="/calories"
@@ -43,6 +43,13 @@ const Header = () => {
             isActive ? classes.active : classes.link}
           >
             Recipes
+          </NavLink>
+          <NavLink
+            to="/savedItems"
+            className={({isActive}) =>
+            isActive ? classes.active : classes.link}
+          >
+            Saved
           </NavLink>
           <NavLink className={classes.link}>Account</NavLink>
         </nav>

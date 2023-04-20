@@ -63,3 +63,9 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+.error {
+  color: rgb(255, 71, 71);
+  margin-bottom: -10px;
+  margin-top: 5px;
+}

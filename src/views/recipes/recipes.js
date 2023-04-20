@@ -2,6 +2,7 @@ import classes from './recipes.module.css'
 import RecipesGenerator from '../../components/recipesGenerator/recipesGenerator'
 import { useState } from 'react';
 import Spinner from '../../components/spinner/spinner';
+import RecipeResponse from '../../components/recipeResponse/recipeResponse';
 
 const Recipes = () => {
   const [recipe, setRecipe] = useState('');
@@ -36,6 +37,7 @@ const Recipes = () => {
       <h1>Recipes</h1>
       <div className={classes.recipesWrapper}>
         <RecipesGenerator onSubmit={fetchRecipes}/>
+        {recipe && <RecipeResponse recipe={recipe}/>}
       </div>
       <Spinner
         loading={loading}
