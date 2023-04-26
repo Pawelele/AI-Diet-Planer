@@ -20,3 +20,14 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+.success {
+  color: rgb(8, 175, 8);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
