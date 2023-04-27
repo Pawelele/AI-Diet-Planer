@@ -35,4 +35,6 @@
 
 .response {
   padding: 0 20px 0 20px;
+  height: 357px;
+  overflow-y: scroll;
 }

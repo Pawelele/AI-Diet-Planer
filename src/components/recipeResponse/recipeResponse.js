@@ -15,7 +15,9 @@ const RecipeResponse = (props) => {
   return (
     <div className={classes.wrapper}>
       <h1>Your recipe</h1>
-      <p>{props.recipe ? props.recipe : 'No data' }</p>
+      <p>{props.recipe ? <div className={classes.response} dangerouslySetInnerHTML={{__html: props.recipe.toString()}} /> : 'No data' }</p>
+
+
 
       <button onClick={saveHandler} className={buttonClasses} disabled={saved}>Save recipe</button>
       {saved && <p className={classes.success}>Recipe saved succesfully</p>}

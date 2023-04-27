@@ -31,3 +31,9 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+.response {
+  padding: 0 20px 0 20px;
+  height: 190px;
+  overflow-y: scroll;
+}

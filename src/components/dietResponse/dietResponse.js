@@ -15,9 +15,8 @@ const DietResponse = (props) => {
   return (
     <div className={classes.wrapper}>
       <h1>Your plan:</h1>
-      <div className={classes.response}>
-        {props.dietPlan ? props.dietPlan : 'No data' }
-      </div>
+
+      {props.dietPlan ? <div className={classes.response} dangerouslySetInnerHTML={{__html: props.dietPlan.toString()}} /> : 'No data' }
 
 
       <button onClick={saveHandler} className={buttonClasses}>Save diet</button>
